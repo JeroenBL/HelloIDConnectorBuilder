@@ -13,10 +13,10 @@ try {
             throw 'Correlation is enabled but [accountFieldValue] is empty. Please make sure it is correctly mapped'
         }
 
+        # === [AI_SECTION: GET_TOKEN] ===
+        # === [END_SECTION] ===
+
         # === [AI_SECTION: FIND_ACCOUNT] ===
-        # INSERT CODE HERE to get account from target system based on correlation field/value.
-        # Example: $correlatedAccount = Invoke-RestMethod -Uri ...
-        # The result should be the found account object or null.
         # === [END_SECTION] ===
     }
 
@@ -34,8 +34,6 @@ try {
             Write-Information 'Creating and correlating account'
 
             # === [AI_SECTION: CREATE_ACCOUNT] ===
-            # INSERT CODE HERE to create a new account in target system.
-            # Set $createdAccount to the created object.
             # === [END_SECTION] ===
 
             $outputContext.Data = $createdAccount
@@ -48,8 +46,6 @@ try {
             Write-Information 'Correlating account'
 
             # === [AI_SECTION: CORRELATE_ACCOUNT] ===
-            # INSERT CODE HERE if special handling is needed for correlation.
-            # Usually, you just reuse $correlatedAccount.
             # === [END_SECTION] ===
 
             $outputContext.Data = $correlatedAccount
